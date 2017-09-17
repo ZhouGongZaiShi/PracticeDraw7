@@ -73,6 +73,7 @@ public class Sample02HsvEvaluatorLayout extends RelativeLayout {
             outHsv[1] = startHsv[1] + (endHsv[1] - startHsv[1]) * fraction;
             outHsv[2] = startHsv[2] + (endHsv[2] - startHsv[2]) * fraction;
 
+            //32位颜色，分别用 8 位表示 ARGB，右移 8 * 3 = 24 位得到 Alpha.
             // 计算当前动画完成度（fraction）所对应的透明度
             int alpha = startValue >> 24 + (int) ((endValue >> 24 - startValue >> 24) * fraction);
 
